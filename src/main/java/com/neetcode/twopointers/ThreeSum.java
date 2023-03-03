@@ -55,6 +55,8 @@ public class ThreeSum {
                if(nums[lo] + nums[high] == diff){
                    List<Integer> triplet = Arrays.asList(nums[i], nums[lo], nums[high]);
                    result.add(triplet);
+
+                   //take care of duplicates
                    while(lo < high && nums[lo] == nums[lo + 1]) lo++;
                    while(lo < high && nums[high] == nums[high - 1])high--;
                    lo++; high--;
