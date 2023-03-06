@@ -1,7 +1,7 @@
 package com.neetcode.linkedlist;
 
 
-public class ReverseLinkedList {
+public class ReverseList {
 
     public static ListNode reverseALinkedListIterative(ListNode head) {
 
