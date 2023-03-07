@@ -22,7 +22,7 @@ public class BuyAndSellStock {
         // Keep track of min on the left
         // Calculate profit by doing curr price - min -> do max(profit, maxProfit)
 
-        int maxProfit = 0, min = prices[0], cost = 0;
+        int maxProfit = 0, min = prices[0], cost;
         for(int price : prices){
             cost = price - min;
             maxProfit = Math.max(cost, maxProfit);
