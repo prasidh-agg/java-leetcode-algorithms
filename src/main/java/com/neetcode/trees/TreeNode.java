@@ -21,8 +21,8 @@ public class TreeNode {
         this.right = right;
     }
 
-    public static TreeNode buildTreeFromArray(int[] arr, int index) {
-        if (index >= arr.length || arr[index] == -1) {
+    public static TreeNode buildTreeFromArray(Integer[] arr, int index) {
+        if (index >= arr.length || arr[index] == null) {
             return null;
         }
 

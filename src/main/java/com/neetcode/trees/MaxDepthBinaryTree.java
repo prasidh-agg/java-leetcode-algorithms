@@ -18,7 +18,7 @@ public class MaxDepthBinaryTree {
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.buildTreeFromArray(new int[]{4,2,7,1,3,6,9}, 0);
+        TreeNode root = TreeNode.buildTreeFromArray(new Integer[]{4,2,7,1,3,6,9}, 0);
         System.out.println(maxDepthTree(root));
     }
 }

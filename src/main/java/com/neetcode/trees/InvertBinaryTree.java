@@ -19,7 +19,7 @@ public class InvertBinaryTree {
 
     public static void main(String[] args) {
 
-        TreeNode treeNode = TreeNode.buildTreeFromArray(new int[]{4, 2, 7, 1, 3, 6, 9}, 0);
+        TreeNode treeNode = TreeNode.buildTreeFromArray(new Integer[]{4, 2, 7, 1, 3, 6, 9}, 0);
         System.out.println("Original Tree: \n");
         TreeNode.printLevelOrder(treeNode);
 
