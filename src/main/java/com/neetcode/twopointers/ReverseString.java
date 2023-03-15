@@ -1,4 +1,4 @@
-package com.neetcode.arrays;
+package com.neetcode.twopointers;
 
 public class ReverseString {
     public static void reverseCharString(char[] s) {
