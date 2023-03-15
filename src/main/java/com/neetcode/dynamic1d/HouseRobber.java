@@ -18,4 +18,7 @@ public class HouseRobber {
         return prev;
 
     }
+    public static void main(String[] args) {
+        System.out.println(rob(new int[]{1,2,7,9}));
+    }
 }
