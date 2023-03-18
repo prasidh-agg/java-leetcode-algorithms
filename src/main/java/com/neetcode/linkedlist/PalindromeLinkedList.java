@@ -8,6 +8,7 @@ public class PalindromeLinkedList {
         ListNode next = middle.next;
         ListNode second = ReverseList.reverseLinkedListRecursive(next);
 
+
         while (second != null) {
             if (head.val != second.val) {
                 return false;
