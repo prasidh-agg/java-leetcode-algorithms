@@ -2,7 +2,6 @@ package com.neetcode.arrays;
 
 public class MinInRotatedSortedArray {
 
-    //TODO: Use chatgpt to cleanup some code
     public static int findMinimumInRotatedSortedArray(int[] nums){
 
         int left = 0, right = nums.length - 1;
