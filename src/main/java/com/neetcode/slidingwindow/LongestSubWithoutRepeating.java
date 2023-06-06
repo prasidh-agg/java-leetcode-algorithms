@@ -19,18 +19,18 @@ public class LongestSubWithoutRepeating {
     set is as the max length.
     Maintain a sliding window. Keep a left and right pointer.
      */
-    public static int longestSubstringWithoutRepeat(String s){
+    public static int longestSubstringWithoutRepeat(String s) {
 
         int maxLen = 0;
         int[] arr = new int[256];
         int l = 0, r = 0;
 
         //r will basically serve as our loop index.. and keeps moving with every iteration
-        while(r < s.length()){
+        while (r < s.length()) {
             char c = s.charAt(r);
             //if arr contains the character c's count as more than 0, it means that it was seen
-            // in the string before.. check if falls between the current l,r range? how to do
-            // that? See whats the max between l and index stored at c.. otherwise dont change l
+            // in the string before, check if falls between the current l,r range? how to do
+            // that? See what's the max between l and index stored at c, otherwise don't change l
             l = (arr[c] > 0) ? Math.max(l, arr[c]) : l;
 
             // store one index next to the one of r. So that next time we encounter the same

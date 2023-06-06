@@ -39,7 +39,7 @@ public class ThreeSum {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
 
-        // a+b+c = 0
+        // a + b + c = 0
         // keep a as constant, and find - (b + c). (TwoSum Problem)
         for(int i = 0; i < nums.length - 2; i++){
 
@@ -56,7 +56,7 @@ public class ThreeSum {
                    List<Integer> triplet = Arrays.asList(nums[i], nums[lo], nums[high]);
                    result.add(triplet);
 
-                   //take care of duplicates
+                   // take care of duplicates
                    while(lo < high && nums[lo] == nums[lo + 1]) lo++;
                    while(lo < high && nums[high] == nums[high - 1])high--;
                    lo++; high--;
