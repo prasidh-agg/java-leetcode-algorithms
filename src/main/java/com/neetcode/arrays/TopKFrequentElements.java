@@ -14,7 +14,7 @@ public class TopKFrequentElements {
 
         //create min heap, least occurring elements in the front of the queue
         Queue<Integer> heap = new PriorityQueue<>(Comparator.comparingInt(map::get));
-
+        System.out.println(heap);
         //keep only k elements from this heap (remove elements until we have k left)
         for(int num : map.keySet()){
             heap.add(num);
@@ -65,6 +65,6 @@ public class TopKFrequentElements {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(topKFrequentBuckets(new int[]{1, 1, 1, 2, 2, 3}, 2)));
+        System.out.println(Arrays.toString(topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2)));
     }
 }

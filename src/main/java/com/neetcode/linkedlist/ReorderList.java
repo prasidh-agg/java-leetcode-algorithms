@@ -46,8 +46,33 @@ public class ReorderList {
         return main;
     }
 
+    public static void reorderList(ListNode head) {
+        ListNode slow = head, fast = head, startOfFirst = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode middle = slow;
+        ListNode startOfSecond = middle.next;
+
+        middle.next = null;
+        startOfSecond = ReverseList.reverseLinkedListRecursive(startOfSecond);
+
+        while(startOfSecond != null){
+            ListNode temp1 = startOfFirst.next;
+            ListNode temp2 = startOfSecond.next;
+
+            startOfFirst.next = startOfSecond;
+            startOfSecond.next = temp1;
+            startOfFirst = temp1;
+            startOfSecond = temp2;
+         }
+
+    }
     public static void main(String[] args) {
-        ListNode list = ListNode.buildLinkedList(new int[]{1});
-        System.out.println(ListNode.printLinkedList(reorderLinkedList(list)));
+        ListNode list = ListNode.buildLinkedList(new int[]{1,2,3,4,5});
+        System.out.println(ListNode.printLinkedList(list));
+        reorderList(list);
+        System.out.println(ListNode.printLinkedList(list));
     }
 }

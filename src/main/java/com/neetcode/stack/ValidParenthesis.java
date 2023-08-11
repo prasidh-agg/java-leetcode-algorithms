@@ -2,7 +2,7 @@ package com.neetcode.stack;
 
 import java.util.Stack;
 
-public class ValidParanthesis {
+public class ValidParenthesis {
 
     /*
     Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if
@@ -13,7 +13,7 @@ public class ValidParanthesis {
     Open brackets must be closed in the correct order.
     Every close bracket has a corresponding open bracket of the same type.
      */
-    public static boolean checkValidParanthesis(String s) {
+    public static boolean checkValidParenthesis(String s) {
 
         Stack<Character> stack = new Stack<>();
 
@@ -38,12 +38,12 @@ public class ValidParanthesis {
     }
 
     public static void main(String[] args) {
-        System.out.println(checkValidParanthesis("({[]})"));
-        System.out.println(checkValidParanthesis("(((}}}"));
-        System.out.println(checkValidParanthesis("()[{]}"));
-        System.out.println(checkValidParanthesis("(){}[]"));
-        System.out.println(checkValidParanthesis("{()}"));
-        System.out.println(checkValidParanthesis("[{{}"));
+        System.out.println(checkValidParenthesis("({[]})"));
+        System.out.println(checkValidParenthesis("(((}}}"));
+        System.out.println(checkValidParenthesis("()[{]}"));
+        System.out.println(checkValidParenthesis("(){}[]"));
+        System.out.println(checkValidParenthesis("{()}"));
+        System.out.println(checkValidParenthesis("[{{}"));
 
     }
 }

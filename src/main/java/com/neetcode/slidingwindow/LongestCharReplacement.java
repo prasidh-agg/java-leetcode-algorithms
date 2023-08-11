@@ -23,7 +23,7 @@ public class LongestCharReplacement {
         int mostFreq = 0, maxLen = 0, start = 0;
         int[] freq = new int[26];
 
-        //Keep of track of frequencies using a hash table
+        //Keep track of frequencies using a hash table
         for(int end = 0; end < s.length(); end ++){
             int endIndex = s.charAt(end) - 'A';
             freq[endIndex]++;
@@ -44,8 +44,8 @@ public class LongestCharReplacement {
     }
 
     public static void main(String[] args) {
-        System.out.println(longestCharacterReplacement("ABAB", 2));
+//        System.out.println(longestCharacterReplacement("ABAB", 2));
         System.out.println(longestCharacterReplacement("AABABBA", 1));
-        System.out.println(longestCharacterReplacement("ABABCDDCC", 2));
+//        System.out.println(longestCharacterReplacement("ABABCDDCC", 2));
     }
 }
